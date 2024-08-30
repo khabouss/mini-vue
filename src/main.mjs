@@ -1,4 +1,4 @@
-import { vnode } from "./App.vue";
+import { vnode } from "./App.mvue";
 
 function isFinalValue(variable) {
   return (

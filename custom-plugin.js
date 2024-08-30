@@ -48,7 +48,7 @@ export default function myVuePlugin() {
   return {
     name: "custom-plugin",
     transform(code, id) {
-      if (!id.endsWith(".vue")) return;
+      if (!id.endsWith(".mvue")) return;
       const descriptor = parse(code);
       const template = descriptor.template ? descriptor.template : "";
       const script = descriptor.script ? descriptor.script : "";
