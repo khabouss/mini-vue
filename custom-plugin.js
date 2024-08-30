@@ -22,7 +22,6 @@ function parse(content) {
 function convertTemplateToRender(template) {
   const content = template.replace(/<\/?template>/g, '').trim();
   const renderFunctionBody = parseContent(content);
-  console.log(renderFunctionBody);
   return `${renderFunctionBody}`;
 }
 
@@ -45,7 +44,7 @@ function parseContent(content) {
   });
 }
 
-export default function myPlugin() {
+export default function myVuePlugin() {
   return {
     name: "custom-plugin",
     transform(code, id) {
